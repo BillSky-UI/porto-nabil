@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio Nabil Al Kaysan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+    <div class="spinner"></div>
+    <h3>Loading Portfolio...</h3>
+</div>
+
+<!-- NAV -->
+<nav>
+    <h3>Nabil Al Kaysan</h3>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <img src="img/potomerah.png" class="profile" data-aos="zoom-in" alt="Profile Nabil Al Kaysan">
+
+    <h1 data-aos="fade-up">Halo, Saya <span>Nabil Al Kaysan</span></h1>
+    <p data-aos="fade-up" data-aos-delay="200">Web Developer | SMKN 1 Ciomas XI PPLG 1</p>
+
+    <div class="skills" data-aos="fade-up" data-aos-delay="250">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Tailwind CSS</div>
+        <div class="skill">PHP Native</div>
+        <div class="skill">Laravel</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">REST API</div>
+        <div class="skill">Midtrans Payment Gateway</div>
+        <div class="skill">VS Code</div>
+        <div class="skill">Laragon</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Postman</div>
+    </div>
+
+    <div class="card-box" data-aos="fade-up" data-aos-delay="300" style="max-width:700px; margin-top:25px;">
+        <p style="color:#cbd5e1; font-size:15px; line-height:1.8;">
+            Saya juga sedang mempelajari dan mengembangkan kemampuan di bidang 
+            <b>Full Stack Web Development</b> menggunakan 
+            <b>React.js</b> untuk frontend dan <b>Node.js + Express</b> sebagai backend, 
+            serta <b>MongoDB</b> sebagai database.
+
+            <br><br>
+
+            Selain itu, saya terbiasa menggunakan tools seperti <b>VS Code</b> dan <b>Laragon</b> 
+            untuk pengembangan lokal, serta framework seperti <b>Bootstrap</b> dan 
+            <b>Tailwind CSS</b> untuk membangun tampilan yang modern, responsive, dan efisien.
+        </p>
+    </div>
+
+    <button class="btn-cv" onclick="openCV()" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-eye"></i> Preview CV
+    </button>
+
+</section>
+
+<!-- ABOUT + STATS + WHAT I DO (3 KOLOM) -->
+<section id="about">
+    <h2 data-aos="fade-right">Overview</h2>
+
+    <div class="three-col-section" data-aos="fade-up">
+
+        <!-- About Me -->
+        <div class="col-card">
+            <h3><i class="fas fa-user"></i> About Me</h3>
+            <p>
+                Saya <b>Nabil Al Kaysan</b>, seorang pelajar dari <b>SMKN 1 Ciomas</b> jurusan <b>XI PPLG 1</b>.
+                Saya fokus pada Web Development dan sedang mendalami HTML, CSS, JavaScript, serta Laravel.
+            </p>
+        </div>
+
+        <!-- My Stats -->
+        <div class="col-card">
+            <h3><i class="fas fa-chart-line"></i> My Stats</h3>
+            <div class="stat-item">
+                <i class="fas fa-fire"></i>
+                <span>6+ Projects Completed</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-bolt"></i>
+                <span>2+ Years Learning</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>Fullstack Developer</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                <span>Active on GitHub</span>
+            </div>
+        </div>
+
+        <!-- What I Do -->
+        <div class="col-card">
+            <h3><i class="fas fa-briefcase"></i> What I Do</h3>
+            <p>
+                <b>Frontend Development</b> — Membangun UI modern, responsive, dan interaktif.
+                <br><br>
+                <b>Backend Development</b> — Membangun sistem API, database, dan logic aplikasi.
+                <br><br>
+                <b>Fullstack App</b> — Mengerjakan project dari frontend sampai backend secara end-to-end.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="project">
+    <h2 data-aos="fade-right">Experience / Project</h2>
+
+    <div class="slider-wrapper" data-aos="fade-up">
+
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+
+                <div class="slide" onclick="openProjectModal(0)">
+                    <div class="card">
+                        <h3>Luxora Olshop</h3>
+                        <p>
+                            E-Commerce berbasis <b>PHP Native</b> dengan fitur:
+                            <br>✔ CRUD Produk
+                            <br>✔ Keranjang & Checkout
+                            <br>✔ Upload Gambar Produk
+                            <br>✔ Sistem Order & Transaksi
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide" onclick="openProjectModal(1)">
+                    <div class="card">
+                        <h3>Raff Food & Cake</h3>
+                        <p>
+                            E-Commerce menggunakan <b>Laravel 12</b>:
+                            <br>✔ Sistem Payment Gateway (Midtrans)
+                            <br>✔ Dashboard Admin
+                            <br>✔ Status Pesanan & Pembayaran
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide" onclick="openProjectModal(2)">
+                    <div class="card">
+                        <h3>Finance Dashboard</h3>
+                        <p>
+                            Backend keuangan menggunakan <b>React.js & MongoDB</b>:
+                            <br>✔ Manajemen data keuangan
+                            <br>✔ API Integration
+                            <br>✔ UI modern & interaktif
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide" onclick="openProjectModal(3)">
+                    <div class="card">
+                        <h3>Website Peminjaman Barang</h3>
+                        <p>
+                            Aplikasi berbasis <b>Laravel 12</b>:
+                            <br>✔ Sistem peminjaman barang
+                            <br>✔ Login & autentikasi
+                            <br>✔ Manajemen data user & barang
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide" onclick="openProjectModal(4)">
+                    <div class="card">
+                        <h3>Website Toko Buku</h3>
+                        <p>
+                            Aplikasi berbasis <b>HTML & JavaScript</b>:
+                            <br>✔ Sistem Search Barang
+                            <br>✔ Fitur Filter Kategori
+                            <br>✔ Desain Responsive (Mobile Friendly)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide" onclick="openProjectModal(5)">
+                    <div class="card">
+                        <h3>Sistem Absensi Siswa</h3>
+                        <p>
+                            Aplikasi berbasis <b>PHP Native / Laravel</b>:
+                            <br>✔ Login Multi User (Admin & Siswa)
+                            <br>✔ Absensi Harian (Hadir, Izin, Alpha)
+                            <br>✔ Rekap Data Absensi
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 data-aos="fade-right">Contact</h2>
+
+    <div style="max-width:600px;">
+        <input type="text" id="nama" placeholder="Nama">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="pesan" placeholder="Pesan"></textarea>
+
+        <button id="btnKirim" onclick="kirimEmail()">Kirim</button>
+        <p id="statusMsg" style="margin-top:10px; font-size:14px;"></p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <h3>Nabil Al Kaysan</h3>
+    <p>Fullstack Web Developer</p>
+
+    <div class="socials">
+
+        <a href="https://www.instagram.com/nabillkysn/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/6283878851008" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:nabillkysn@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/BillSky-UI" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+
+    </div>
+
+    <p class="copy">© 2026 Nabil Al Kaysan</p>
+
+</footer>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="project-modal">
+    <div class="project-modal-content">
+        <span class="close" onclick="closeProjectModal()">&times;</span>
+        <h3 id="projectModalTitle"></h3>
+        <div id="projectModalBody"></div>
+    </div>
+</div>
+
+<!-- CV MODAL -->
+<div id="cvModal" class="cv-modal">
+    <div class="cv-content">
+
+        <!-- tombol close -->
+        <span class="close" onclick="closeCV()">&times;</span>
+
+        <!-- preview CV -->
+        <iframe src="CV-Nabil-Al-Kaysan.pdf" title="Preview CV"></iframe>
+
+        <!-- tombol download -->
+        <a href="#" onclick="downloadCV(); return false;" class="download-btn">
+            <i class="fas fa-download"></i> Download CV
+        </a>
+
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
